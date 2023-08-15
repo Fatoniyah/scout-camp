@@ -1,0 +1,26 @@
+{
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "body-parser": "^1.20.2",
+    "cors": "^2.8.5",
+    "dotenv": "^16.3.1",
+    "express": "^4.18.2",
+    "express-jwt": "^8.4.1",
+    "jsonwebtoken": "^9.0.1",
+    "mongoose": "^7.4.3",
+    "morgan": "^1.10.0",
+    "nodemon": "^3.0.1"
+  },
+  "name": "scout-camp",
+  "description": "โปรเจคสำหรับการเก็บกิจกรรมลูกเสือ\r สำหรับฟังก์ชั่นหลักๆ ในโปรแกรมก็จะประกอบไปด้วย\r 1. การแสดงกิจกรรมของค่ายลูกเสือบนแผนที่\r 2. การค้นหากิจกรรมของค่ายลูกเสือ ด้วย\r     2.1 จังหวัด\r     2.2 อำเภอ\r 3. แสดงกิจกรรมลูกเสือที่เปิดอยู่ในขณะนี้\r 4. เพิ่มลบกิจกรรมต่างๆ CRUD , Create ,Read, Update , Delete\r 5. การล็อกอินแบบแบ่งสิทธิ์ ระหว่าง admin กับ user\r      5.1 จำกัดสิทธิ์การเข้าถึงหน้าเว็บต่างๆ แยกกันระหว่าง admin กับ user\r      ด้วย JSON WebToken",
+  "version": "1.0.0",
+  "main": "index.js",
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon server"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
