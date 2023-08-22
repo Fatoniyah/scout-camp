@@ -1,7 +1,7 @@
 const express = require('express');
 const mongoose = require('mongoose');
 const morgan = require('morgan');
-const bodyPaeser = require('body-parser');
+const bodyParser = require('body-parser');
 const cors = require('cors');
 require('dotenv').config();
 const { readdirSync } = require('fs')
@@ -12,10 +12,17 @@ const { readdirSync } = require('fs')
 
 const app = express();
 
+// connect DB
+mongoose.connect(process.env.DATABASE, {
+    useNewUrlParser: true,
+    useUnifiedTopology: true
+    //useCreateIndex: true
+}).then(()=> console.log('DB Connect'))
+    .catch((err)=> console.log('DB Connect Error', err))
 
 // middleware
 app.use(morgan("dev"));
-app.use(bodyPaeser.json({ limit: "2mb" }));
+app.use(bodyParser.json({ limit: "2mb" }));
 app.use(cors());
 
 // routes
